@@ -22,23 +22,18 @@ const CARDS = [
   },
 ]
 
-const testimonioArticleBg = {
-  backgroundImage: "url('/COMILLAS.png')",
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center',
-  backgroundSize: '100% 100%',
-  backgroundOrigin: 'border-box',
-  backgroundClip: 'border-box',
-}
+/** Móvil: `cuadromobile.png`; desde `md`: marco de escritorio `COMILLAS.png`. */
+const testimonioArticleBg =
+  "bg-[url('/cuadromobile.png')] bg-[length:100%_100%] bg-center bg-no-repeat bg-origin-border bg-clip-border md:bg-[url('/COMILLAS.png')]"
 
 const testimonioArticleShell =
-  'relative flex min-h-0 w-full min-w-0 flex-col overflow-hidden rounded-[2rem] px-5 pt-22 pb-18 min-[400px]:px-6 min-[400px]:pt-24 min-[400px]:pb-20 sm:px-7 sm:pt-[5.5rem] sm:pb-20 md:px-8 md:pt-24 md:pb-20 lg:px-9 lg:pt-22 lg:pb-14 xl:px-10 xl:pt-24 xl:pb-14'
+  'relative flex min-h-0 w-full min-w-0 flex-col overflow-hidden rounded-[2rem] px-9 pt-22 pb-18 min-[400px]:px-11 min-[400px]:pt-24 min-[400px]:pb-20 sm:px-11 sm:pt-[5.5rem] sm:pb-20 md:px-11 md:pt-24 md:pb-20 lg:px-12 lg:pt-22 lg:pb-14 xl:px-14 xl:pt-24 xl:pb-14'
 
 /** Escala responsive: móvil con vw alto; desde `lg` dos columnas → en `md` sigue una columna ancha. */
 const testimonioQuoteType =
   'm-0 min-w-0 break-words text-left font-normal uppercase leading-snug tracking-tight text-brand-blue ' +
-  'text-[clamp(0.7rem,3vw+0.28rem,0.88rem)] ' +
-  'min-[400px]:text-[clamp(0.72rem,2.5vw+0.32rem,0.92rem)] ' +
+  'text-[clamp(0.64rem,2.65vw+0.22rem,0.8rem)] ' +
+  'min-[400px]:text-[clamp(0.66rem,2.2vw+0.26rem,0.86rem)] ' +
   'sm:text-[clamp(0.76rem,1.75vw+0.36rem,0.98rem)] ' +
   'md:text-[clamp(0.75rem,1vw+0.34rem,1.02rem)] ' +
   'lg:text-[clamp(0.8rem,0.72vw+0.38rem,1.06rem)] ' +
@@ -47,8 +42,8 @@ const testimonioQuoteType =
 
 const testimonioAttributionType =
   'm-0 min-w-0 flex-1 break-words text-left font-normal uppercase leading-snug tracking-tight text-brand-blue ' +
-  'text-[clamp(0.66rem,2.5vw+0.26rem,0.82rem)] ' +
-  'min-[400px]:text-[clamp(0.68rem,2.1vw+0.28rem,0.86rem)] ' +
+  'text-[clamp(0.6rem,2.2vw+0.2rem,0.76rem)] ' +
+  'min-[400px]:text-[clamp(0.62rem,1.85vw+0.22rem,0.8rem)] ' +
   'sm:text-[clamp(0.72rem,1.45vw+0.32rem,0.9rem)] ' +
   'md:text-[clamp(0.7rem,0.85vw+0.3rem,0.94rem)] ' +
   'lg:text-[clamp(0.76rem,0.58vw+0.34rem,0.98rem)] ' +
@@ -57,7 +52,7 @@ const testimonioAttributionType =
 
 function TestimonioCard({ quote, photoSrc, photoAlt, attribution }) {
   return (
-    <article className={testimonioArticleShell} style={testimonioArticleBg}>
+    <article className={`${testimonioArticleShell} ${testimonioArticleBg}`}>
       <div className="relative flex min-h-0 w-full min-w-0 flex-col">
         <blockquote className="relative z-0 m-0 min-w-0 border-none">
           <p className={testimonioQuoteType}>{quote}</p>
@@ -68,7 +63,7 @@ function TestimonioCard({ quote, photoSrc, photoAlt, attribution }) {
             alt={photoAlt}
             width={192}
             height={192}
-            className="size-24 shrink-0 rounded-full object-cover object-center sm:size-28 md:size-32"
+            className="size-20 shrink-0 rounded-full object-cover object-center min-[400px]:size-[5.25rem] sm:size-28 md:size-32"
             loading="lazy"
             decoding="async"
           />
