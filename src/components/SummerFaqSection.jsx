@@ -8,35 +8,33 @@ const blackFontFamily = {
   fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif",
 }
 
-/** Mismos ítems que `adults2026fyrlois/src/components/FaqSection.jsx`. */
 const FAQ_ITEMS = [
   {
-    question: '¿Cuánto cuesta?',
+    question: '¿Qué edades pueden participar en el plan vacacional?',
     answer:
-      'Contamos con planes flexibles y opciones de pago adaptadas a ti. Escríbenos por WhatsApp y en menos de 10 minutos recibirás toda la información clara, sin compromiso.',
+      'Nuestro programa está diseñado para niños y adolescentes, con grupos organizados por edades para garantizar una experiencia dinámica y adaptada a cada etapa.',
     accent: 'green',
   },
   {
-    question: '¿Cómo son las clases (online vs presencial)?',
+    question: '¿Es necesario tener conocimientos previos de inglés?',
     answer:
-      'Elige entre modalidad online en vivo o presencial en Caracas, con grupos pequeños y atención personalizada.',
+      'No es necesario. Realizamos una nivelación para ubicar a cada participante y asegurar que aproveche al máximo cada actividad.',
     accent: 'blue',
   },
   {
-    question: '¿Qué pasa si no puedo asistir a una clase?',
+    question: '¿Qué incluye el plan vacacional?',
     answer:
-      'Puedes recuperarla cumpliendo con nuestras políticas de reprogramación y disponibilidad.',
+      'Incluye clases dinámicas de inglés, actividades recreativas, juegos, dinámicas grupales y una experiencia temática inspirada en el Mundial, donde los estudiantes aprenden mientras se divierten.',
     accent: 'green',
   },
   {
-    question: '¿En cuánto tiempo voy a ver resultados?',
+    question: '¿Es un campamento de fútbol o de inglés?',
     answer:
-      'La mayoría de nuestros estudiantes nota avances reales en solo 3 meses. En aproximadamente 6 meses, ya podrás dominar tu nivel con mayor seguridad.',
+      'Es un Summer Camp para aprender inglés. La temática está inspirada en el Mundial de Fútbol, pero no es un campamento deportivo. Todo está diseñado para que los participantes vivan una experiencia divertida mientras desarrollan su inglés.',
     accent: 'blue',
   },
 ]
 
-/** Copia de `FaqItem` en adults2026fyrlois/FaqSection.jsx */
 function FaqItem({ question, answer, accent }) {
   const accentColor = accent === 'green' ? 'bg-brand-green' : 'bg-brand-blue'
 
