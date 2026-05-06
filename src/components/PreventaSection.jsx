@@ -69,17 +69,27 @@ export function PreventaSection() {
             </div>
           </div>
 
-          <div className="order-2 flex w-full min-w-0 max-w-full shrink-0 flex-col items-center gap-2.5 self-stretch pt-1 sm:gap-3 sm:pt-0 lg:order-2 lg:w-auto lg:max-w-[min(100%,26rem)] lg:flex-none lg:self-start xl:max-w-[min(100%,30rem)] 2xl:max-w-[min(100%,32rem)]">
+          <div className="relative order-2 flex w-full min-w-0 max-w-full shrink-0 flex-col items-center gap-2.5 self-stretch overflow-visible pt-1 sm:gap-3 sm:pt-0 lg:order-2 lg:w-auto lg:max-w-[min(100%,26rem)] lg:flex-none lg:self-start xl:max-w-[min(100%,30rem)] 2xl:max-w-[min(100%,32rem)]">
+            <img
+              src="/balon.png"
+              alt=""
+              width={220}
+              height={220}
+              className="pointer-events-none absolute left-0 top-1/2 z-0 h-auto w-[clamp(9.5rem,44vw,14rem)] -translate-x-[70%] -translate-y-1/2 object-contain sm:w-[clamp(10rem,38vw,14.5rem)] lg:left-auto lg:right-0 lg:w-[clamp(10rem,16vw,15rem)] lg:translate-x-[62%]"
+              loading="lazy"
+              decoding="async"
+              aria-hidden
+            />
             <img
               src="/23.png"
               alt="Cupos disponibles: 23"
               width={360}
               height={260}
-              className="h-auto w-full max-w-[min(100%,16.5rem)] object-contain sm:max-w-[min(100%,18.5rem)] md:max-w-[min(100%,20.5rem)] lg:max-w-[min(100%,22rem)] xl:max-w-[min(100%,26rem)] 2xl:max-w-[min(100%,28rem)]"
+              className="relative z-10 h-auto w-full max-w-[min(100%,16.5rem)] object-contain sm:max-w-[min(100%,18.5rem)] md:max-w-[min(100%,20.5rem)] lg:max-w-[min(100%,22rem)] xl:max-w-[min(100%,26rem)] 2xl:max-w-[min(100%,28rem)]"
               loading="lazy"
               decoding="async"
             />
-            <p className={`${bodyBlue} w-full max-w-full px-1 text-center sm:px-0`}>
+            <p className={`${bodyBlue} relative w-full max-w-full px-1 text-center max-md:translate-x-5 sm:px-0`}>
               Cupos disponibles
             </p>
           </div>

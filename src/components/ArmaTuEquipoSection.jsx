@@ -4,11 +4,11 @@ import {
   landingSectionHx,
 } from '../lib/landingLayout.js'
 
-const leftLineBlue =
-  'm-0 font-black uppercase leading-[0.92] tracking-tight text-brand-blue text-[clamp(1.65rem,5vw+0.55rem,2.65rem)] sm:text-[clamp(1.95rem,4.2vw+0.65rem,3.15rem)] md:text-[clamp(2.25rem,3.5vw+0.75rem,3.65rem)] lg:text-[clamp(2.55rem,2.8vw+0.85rem,4.15rem)]'
+const headlineBodyBlue =
+  'm-0 font-bold uppercase leading-[1.12] tracking-[0.05em] text-brand-blue text-[clamp(0.66rem,1.25vw+0.38rem,0.86rem)] sm:whitespace-nowrap sm:text-[clamp(1.12rem,1.92vw+0.6rem,1.4rem)] md:text-[clamp(1.18rem,1.52vw+0.66rem,1.48rem)] lg:text-[clamp(1.26rem,1.2vw+0.72rem,1.56rem)]'
 
-const leftLineWhite =
-  'm-0 font-black uppercase leading-[0.92] tracking-tight text-white text-[clamp(1.65rem,5vw+0.55rem,2.65rem)] sm:text-[clamp(1.95rem,4.2vw+0.65rem,3.15rem)] md:text-[clamp(2.25rem,3.5vw+0.75rem,3.65rem)] lg:text-[clamp(2.55rem,2.8vw+0.85rem,4.15rem)]'
+const headlineOrange =
+  'm-0 whitespace-nowrap font-black uppercase leading-[0.98] tracking-tight text-white text-[clamp(1.18rem,2.85vw+0.54rem,1.68rem)] sm:text-[clamp(1.5rem,2.85vw+0.7rem,2.2rem)] md:text-[clamp(1.68rem,2.45vw+0.78rem,2.48rem)] lg:text-[clamp(1.88rem,2.02vw+0.86rem,2.78rem)] xl:text-[clamp(2.1rem,1.72vw+0.95rem,3.08rem)]'
 
 const cardTitle =
   'm-0 text-center font-black uppercase leading-none tracking-tight text-white text-[clamp(1.65rem,4.5vw+0.85rem,2.1rem)] sm:text-[clamp(1.38rem,2vw+0.7rem,1.75rem)] md:text-[clamp(1.52rem,1.45vw+0.76rem,1.95rem)] lg:text-[clamp(1.68rem,1.15vw+0.84rem,2.15rem)]'
@@ -45,19 +45,19 @@ export function ArmaTuEquipoSection() {
       aria-labelledby="arma-equipo-heading"
     >
       <div className={`${landingMaxWidthBox} ${landingSectionHx}`}>
-        <div className="flex w-full min-w-0 flex-col items-stretch gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12 xl:gap-16">
-          <div className="flex min-w-0 max-w-full flex-col items-start gap-0 lg:max-w-[min(100%,26rem)] xl:max-w-[min(100%,30rem)]">
+        <div className="flex w-full min-w-0 flex-col items-stretch gap-8">
+          <div className="flex min-w-0 max-w-full flex-col items-center gap-0 text-center">
             <h2 id="arma-equipo-heading" className="sr-only">
-              Estas vacaciones, arma tu equipo por edades
+              La emoción del mundial continua con nuestro summer, donde tu hijo juega, y descubre el mundo. Aprende ingles de forma natural.
             </h2>
-            <p className={leftLineBlue}>Estas</p>
-            <p className={leftLineBlue}>vacaciones</p>
-            <p className={`${leftLineWhite} mt-0.5 whitespace-nowrap sm:mt-1`}>
-              ¡Arma tu equipo!
+            <p className={`${headlineBodyBlue} whitespace-nowrap`}>
+              La emoción del mundial continua con nuestro summer,
             </p>
+            <p className={headlineBodyBlue}>donde tu hijo juega, y descubre el mundo</p>
+            <p className={headlineOrange}>aprende ingles de forma natural.</p>
           </div>
 
-          <div className="grid w-full min-w-0 max-w-full grid-cols-1 justify-items-center gap-3 sm:grid-cols-3 sm:gap-2.5 md:gap-3 lg:max-w-[min(100%,44rem)] lg:justify-items-center xl:max-w-[min(100%,48rem)]">
+          <div className="grid w-full min-w-0 max-w-full grid-cols-1 justify-items-center gap-3 sm:grid-cols-3 sm:gap-2.5 md:gap-3">
             <EtapaCard
               src="/nina.png"
               alt="Kids — 3 a 5 años"
