@@ -59,13 +59,10 @@ function FaqItem({ question, answer, accent }) {
   )
 }
 
-const PLACEHOLDER_IMAGES = [
-  { src: '/nina.png', alt: 'Summer — imagen de ejemplo (sustituir en producción)' },
-  { src: '/nino.png', alt: 'Summer — imagen de ejemplo (sustituir en producción)' },
-  {
-    src: '/adolescente.png',
-    alt: 'Summer — imagen de ejemplo (sustituir en producción)',
-  },
+const FAQ_HEADER_IMAGES = [
+  { src: '/faq1.png', alt: 'Ilustración relacionada con el plan vacacional' },
+  { src: '/faq2.png', alt: 'Ilustración sobre inglés y nivelación' },
+  { src: '/faq3.png', alt: 'Ilustración sobre actividades del summer camp' },
 ]
 
 export function SummerFaqSection() {
@@ -77,17 +74,17 @@ export function SummerFaqSection() {
       <div className={`${landingMaxWidthBox} ${landingSectionHx}`}>
         <div className="mx-auto flex w-full min-w-0 max-w-[75rem] flex-col gap-8 sm:gap-10 md:gap-12 lg:gap-14">
           <div className="grid w-full min-w-0 grid-cols-3 gap-2 min-[400px]:gap-2.5 sm:gap-3 md:gap-5 lg:gap-6">
-            {PLACEHOLDER_IMAGES.map(({ src, alt }) => (
+            {FAQ_HEADER_IMAGES.map(({ src, alt }) => (
               <figure
                 key={src}
-                className="m-0 min-h-0 w-full min-w-0 overflow-hidden rounded-lg bg-brand-blue shadow-sm sm:rounded-xl md:rounded-2xl"
+                className="m-0 flex aspect-[16/10] w-full min-w-0 items-center justify-center overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl"
               >
                 <img
                   src={src}
                   alt={alt}
-                  width={800}
-                  height={520}
-                  className="aspect-[3/4] h-auto w-full object-cover sm:aspect-[4/3] md:aspect-[5/3]"
+                  width={960}
+                  height={600}
+                  className="h-full w-full object-contain"
                   loading="lazy"
                   decoding="async"
                 />
